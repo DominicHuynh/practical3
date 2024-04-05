@@ -1,12 +1,19 @@
-
 #include "Person.h"
-#include <iostream>
-extern Person* createPersonArray(int n); 
+#include<iostream>
+#include<string>
+using namespace std;
+extern Person* createPersonArray(int n);
 int main(){
-    Person* array = createPersonArray(5);
-    for (int i = 0; i < 5; i++)
-    {
-        std::cout << i << " " << array[i].name <<" "<< array[i].age; 
-    }
     
+    Person* arr=  createPersonArray(5);
+    cout<<"The name and age is:  "<<endl;
+    for (int i=0;i<5;i++){
+        cout<<arr[i].name << " "<< arr[i].age<<endl;
+    }
+
+
+
+
+
+    return 0;
 }

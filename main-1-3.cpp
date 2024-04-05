@@ -1,23 +1,16 @@
-
 #include "Person.h"
-#include <iostream>
-PersonList createPersonList(int n){
-    PersonList arr;
-    arr.numPeople = n;
-    arr.people = new Person[n];
-    for (int i = 0; i < n; i++)
-    {
-        arr.people[i].name = "Jane Doe";
-        arr.people[i].age = 1;
-    }
-    return arr;
-}
+#include<iostream>
+#include<string>
 extern PersonList deepCopyPersonList(PersonList pl);
+extern PersonList createPersonList(int n);
 int main(){
-     PersonList list = createPersonList(5);
-    PersonList newlist = deepCopyPersonList(list);
-        for (int i = 0; i < 5; i++)
-    {
-        std::cout << i << " " << newlist.numPeople <<" "<< newlist.people[i].age << " " << newlist.people[i].name; 
+    PersonList pl=createPersonList(5);
+    PersonList npl= deepCopyPersonList(pl);
+     cout<<"The name and age is:  "<<endl;
+    for (int i=0; i<5; i++){
+        cout<< npl.people[i].name << " "<< npl.people[i].age<<endl;
     }
+
+
+    return 0;
 }

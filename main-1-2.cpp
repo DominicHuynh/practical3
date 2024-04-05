@@ -1,11 +1,19 @@
-
 #include "Person.h"
-#include <iostream>
+#include <string>
+#include<iostream>
 extern PersonList createPersonList(int n);
 int main(){
-     PersonList list = createPersonList(5);
-    for (int i = 0; i < 5; i++)
-    {
-        std::cout << i << " " << list.numPeople <<" "<< list.people[i].age << " " << list.people[i].name; 
+    PersonList arr= createPersonList(5);
+     cout<<"The name and age is:  "<<endl;
+    for (int i=0;i<5;i++){
+        cout<<arr.people[i].name << " "<< arr.people[i].age<<endl;
     }
+
+
+
+
+
+
+
+    return 0;
 }
